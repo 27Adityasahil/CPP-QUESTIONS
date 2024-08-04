@@ -9,15 +9,17 @@ int main()
     cout << "Enter the number to find its square root:: ";
     cin >> number;
 
-    float result = 0;
+    int result = 0;
 
-    float s = 0, e = number;
-    float mid = s + (e - s) / 2;
+    int s = 0, e = number, mid = s + (e - s) / 2;
 
     while (s <= e)
     {
         if ((mid * mid) == number)
+        {
             result = mid;
+            break;
+        }
         else if ((mid * mid) < number)
         {
             result = mid;
